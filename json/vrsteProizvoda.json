@@ -1,0 +1,23 @@
+[
+
+        {
+            "naslov":"Imunitet",
+            "id": 1,
+            "slika":"slike/flex1.jpg"
+        },
+
+        {
+            "naslov":"Lepota",
+            "id": 2,
+            "slika":"slike/flex6.jpg"
+        },
+
+        {
+            "naslov": "Zdravlje",
+            "id": 3,
+            "slika":"slike/flex7.jpg"
+        }
+        
+
+
+]

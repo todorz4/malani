@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proizvodi</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="fixed-header">
+        <nav>
+            <div data-tilt class="logo">
+                <h4>Malani</h4>
+            </div>
+            <ul class="nav-links">
+               
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="proizvodi.html">Proizvodi</a></li>
+                <li><a href="about.html">O nama</a></li>
+                <li><a href="oautoru.html">O autoru</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="proizvodi-strana">
+        <div class="proizvodi-forma">
+            <textarea disabled id="ta1" disabled rows="3" cols="50"></textarea>
+            <div id="opis0"></div>
+            <div class="korpa-podaci">
+                <input type="text" name="ime" id="proizvodi-ime" autocomplete="off" required />
+                <label for="ime" class="korpa-labela">
+                    <span class="korpa-span" id="proizvodi-ime">Ime</span>
+                </label>
+                
+            </div>
+            <div id="opis1"></div>
+            <div class="korpa-podaci">
+                <input type="text" name="prezime" id="proizvodi-prezime" autocomplete="off" required />
+                <label for="prezime" class="korpa-labela">
+                    <span class="korpa-span" >Prezime</span>
+                </label>
+            </div>
+            <div id="opis2"></div>
+            <div class="korpa-podaci">
+                <input type="text" name="adresa" id="proizvodi-adresa" autocomplete="off" required />
+                <label for="adresa" class="korpa-labela">
+                    <span class="korpa-span" >Adresa</span>
+                </label>
+            </div>
+            <div id="opis3"></div>
+            <div class="korpa-podaci">
+                <input type="number" name="telefon" id="proizvodi-telefon" autocomplete="off" required />
+                <label for="telefon" class="korpa-labela">
+                    <span class="korpa-span" >Telefon</span>
+                </label>
+            </div>
+            <div id="opis4"></div>
+
+            <div id="korpa-porucivanje">
+                <div id="cena-labele">
+                    <label for="cena">Cena: </label>
+                    <label name="cena" id="cena">   ---</label>
+                </div>
+                <div id="dugmici-porucivanje">
+                    <button class="dugme-naruci dugme" id="naruci" value="naruci">Naruči</button>
+                </div>
+            </div>
+            <div id="dugme-ponisti-div">
+                <button class="dugme-ponisti dugme" id="ponisiti" value="ponisiti">Poništi</button>
+            </div>
+        </br>
+            <div id="kontaktPoslato"></div>
+
+        </div>
+        <div class="proizvodi-katalaog">
+            <div class="Proizvodi-naslov">
+
+            </div>
+
+            <section class="proizvodi">
+                <div id="pano">
+                    <form>
+                        <input type="text" placeholder="Pretražite po imenu"   class="form-control" id="pretraga"/>
+                        <select name="flitritaj" class="form-control" id="filtriraj">
+                            <option value="0">Izaberite kategoriju</option>
+                            <option value="1">Imunitet</option>
+                            <option value="2">Lepota</option>
+                            <option value="3">Zdravlje</option>
+                          </select>    
+
+                          <select name="sortiraj" class="form-control" id="sortitaj">
+                            <option value="0">Sortirajte po</option>
+                            <option value="1">Cena opadajuće</option>
+                            <option value="2">Cena rastuće</option>
+                          </select>  
+                    </form>
+                </div>
+                <h1 id="kategorija1"></h1>
+               <div class="proizvodi-kategorija" id="kat1">
+              <!--- <div class="proizvod-karta">
+                 <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Imunitet/5-HTP-Complex.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>5-HTP<br>Complex</h1>
+                                <h3><del>2550,00</del></h3>
+                                <h2>2000,00 RSD</h2>
+                                
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme1" value="5-HTP Complex">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Imunitet/Antioxidant-formula.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Antioxidant Formula</h1>
+                                <h2>2000,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme2" value="Antioxidant Formula">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina2">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Imunitet/Beta-1-3-Glucans.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Beta 1 <br> 3 Glucans</h1>
+                                <h2>2000,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme3" value="Beta-1 3-Glucans">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina3">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Imunitet/Biotin-300mg.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Biotin <br> 300mg</h1>
+                                <h2>2000,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme4" value="Biotin 300mg">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina4">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Imunitet/Bromelain-300mg.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Bromelain <br> 300mg</h1>
+                                <h2>1500,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme5" value="Bromelain 300mg">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina5">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Imunitet/Rutin-500mg.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Rutin <br> 500mg</h1>
+                                <h2>1500,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme6" value="Rutin 500mg">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina6">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Imunitet/Ultibio-Immune.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Ultibio <br> Immune</h1>
+                                <h2>1500,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme7" value="Ultibio Immune">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina7">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Imunitet/Vitamin-C-1500mg.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Vitamin C <br> 1500mg</h1>
+                                <h2>1000,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme8" value="VVitamin C 1500mg">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina8">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dopuna">
+
+                    </div>
+                </div>
+
+                <h1 id="kategorija2">Lepota</h1>
+                <div class="proizvodi-kategorija">
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Lepota/Alpha-Lipoic-Acid.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Alpha-Lipoic <br> Acid</h1>
+                                <h2>1750,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme9" value="Alpha-Lipoic Acid">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina9">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Lepota/Antioxidant-Nutrients.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Antioxidant <br> Nutrients</h1>
+                                <h2>1750,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme10" value="Antioxidant Nutrients">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina10">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Lepota/BCAA-Plus.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>BCAA <br> Plus</h1>
+                                <h2>2300,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme11" value="BCAA Plus">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina11">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Lepota/Betaine-Hydrochloride.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Betaine  Hydrochloride</h1>
+                                <h2>2000,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme12" value="Betaine Hydrochloride">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina12">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Lepota/Bitoin-1000mg.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Bitoin <br> 1000mg</h1>
+                                <h2>1700,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme13" value="Bitoin 1000mg">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina13">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Lepota/Chelated-Zinc.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Chelated <br> Zinc</h1>
+                                <h2>1000,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme14" value="Chelated Zinc">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina14">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Lepota/Cranberry-with-Vitamin-C.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Cranberry <br> Vitamin C</h1>
+                                <h2>1100,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme15" value="Cranberry with Vitamin C">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina15">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proizvod-karta">
+                        <div class="shadow">
+                            <div class="proizvod-slika">
+                                <img src="slike/Lepota/Digestive-Enzymes.jpg">
+                            </div>
+                            <div class="proizvod-opis">
+                                <h1>Digestive <br> Enzymes</h1>
+                                <h2>800,00 RSD</h2>
+                                <div class="poruci">
+                                    <button class="dugme" id="dugme16" value="Digestive Enzymes">Poruči</button>
+                                    <select class="kolicina-proizvoda" name="kolicina" id="kolicina16">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    < <div class="dopuna">
+
+                </div>
+        </div>
+        <h1 id="kategorija3">Zdravlje</h1>
+        <div class="proizvodi-kategorija">
+            <div class="proizvod-karta">
+                <div class="shadow">
+                    <div class="proizvod-slika">
+                        <img src="slike/Zdravlje/Alpha-Lipoic-acid.jpg">
+                    </div>
+                    <div class="proizvod-opis">
+                        <h1>Alpha-Lipoic <br> Acid</h1>
+                        <h2>2000,00 RSD</h2>
+                        <div class="poruci">
+                            <button class="dugme" id="dugme17" value="Alpha-Lipoic Acid">Poruči</button>
+                            <select class="kolicina-proizvoda" name="kolicina" id="kolicina17">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proizvod-karta">
+                <div class="shadow">
+                    <div class="proizvod-slika">
+                        <img src="slike/Zdravlje/Astaxanthin-5mg.jpg">
+                    </div>
+                    <div class="proizvod-opis">
+                        <h1>Astaxanthin <br> 5mg</h1>
+                        <h2>1000,00 RSD</h2>
+                        <div class="poruci">
+                            <button class="dugme" id="dugme18" value="Astaxanthin 5mg">Poruči</button>
+                            <select class="kolicina-proizvoda" name="kolicina" id="kolicina18">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proizvod-karta">
+                <div class="shadow">
+                    <div class="proizvod-slika">
+                        <img src="slike/Zdravlje/Bilberry-Ginko-Eyebright.jpg">
+                    </div>
+                    <div class="proizvod-opis">
+                        <h1>Bilberry <br> Ginko </h1>
+                        <h2>2500,00 RSD</h2>
+                        <div class="poruci">
+                            <button class="dugme" id="dugme19" value="Bilberry Ginko">Poruči</button>
+                            <select class="kolicina-proizvoda" name="kolicina" id="kolicina19">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proizvod-karta">
+                <div class="shadow">
+                    <div class="proizvod-slika">
+                        <img src="slike/Zdravlje/Coenztme-Q-10.jpg">
+                    </div>
+                    <div class="proizvod-opis">
+                        <h1>Coenztme <br> Q-10</h1>
+                        <h2>1500,00 RSD</h2>
+                        <div class="poruci">
+                            <button class="dugme" id="dugme20" value="Coenztme Q-10">Poruči</button>
+                            <select class="kolicina-proizvoda" name="kolicina" id="kolicina20">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proizvod-karta">
+                <div class="shadow">
+                    <div class="proizvod-slika">
+                        <img src="slike/Zdravlje/CoQ-10-120mg.jpg">
+                    </div>
+                    <div class="proizvod-opis">
+                        <h1>CoQ-10 <br> 120mg</h1>
+                        <h2>2400,00 RSD</h2>
+                        <div class="poruci">
+                            <button class="dugme" id="dugme21" value="CoQ-10 120mg">Poruči</button>
+                            <select class="kolicina-proizvoda" name="kolicina" id="kolicina21">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proizvod-karta">
+                <div class="shadow">
+                    <div class="proizvod-slika">
+                        <img src="slike/Zdravlje/CoQ-10-30mg.jpg">
+                    </div>
+                    <div class="proizvod-opis">
+                        <h1>CoQ-10 <br> 30mg</h1>
+                        <h2>1200,00 RSD</h2>
+                        <div class="poruci">
+                            <button class="dugme" id="dugme22" value="CoQ-10 30mg">Poruči</button>
+                            <select class="kolicina-proizvoda" name="kolicina" id="kolicina22">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proizvod-karta">
+                <div class="shadow">
+                    <div class="proizvod-slika">
+                        <img src="slike/Zdravlje/L-Arginine-500mg.jpg">
+                    </div>
+                    <div class="proizvod-opis">
+                        <h1>L-Arginine <br> 500mg</h1>
+                        <h2>3000,00 RSD</h2>
+                        <div class="poruci">
+                            <button class="dugme" id="dugme23" value="L-Arginine 500mg">Poruči</button>
+                            <select class="kolicina-proizvoda" name="kolicina" id="kolicina23">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proizvod-karta">
+                <div class="shadow">
+                    <div class="proizvod-slika">
+                        <img src="slike/Zdravlje/L-Cysteine-500mg.jpg">
+                    </div>
+                    <div class="proizvod-opis">
+                        <h1>L-Cysteine <br> 500mg</h1>
+                        <h2>2700,00 RSD</h2>
+                        <div class="poruci">
+                            <button class="dugme" id="dugme24" value="L-Cysteine 500mg">Poruči</button>
+                            <select class="kolicina-proizvoda" name="kolicina" id="kolicina24">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+        
+            <div class="dopuna">
+
+            </div>
+        </div>
+
+
+        </section>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/proizvodi.js"></script>
+</body>
+
+</html>

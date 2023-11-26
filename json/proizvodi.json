@@ -1,0 +1,317 @@
+[
+
+
+
+{
+    "id": 1,   
+    "naziv":"5-HTP Complex",
+    "cena":{ 
+        "stara":2550,
+        "nova": 2000
+    },
+    "slika":"slike/Imunitet/5-HTP-Complex.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme1",
+    "dropId": "kolicina1"
+    
+},
+{
+    "id": 2,   
+    "naziv":"Antioxidant Formula",
+    "cena":{ 
+        "nova": 1100
+    },
+    "slika":"slike/Imunitet/Antioxidant-formula.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme2",
+    "dropId": "kolicina2"
+  
+},
+{
+    "id": 3,   
+    "naziv":"Beta 1 3 Glucans",
+    "cena":{ 
+        "stara":4200,
+        "nova": 3600
+    },
+    "slika":"slike/Imunitet/Beta-1-3-Glucans.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme3",
+    "dropId": "kolicina3"
+  
+},
+{
+    "id": 4,   
+    "naziv":"Biotin 300mg",
+    "cena":{ 
+        "stara":2500,
+        "nova": 1900
+    },
+    "slika":"slike/Imunitet/Biotin-300mg.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme4",
+    "dropId": "kolicina4"
+  
+},
+{
+    "id": 5,   
+    "naziv":"Bromelanin 300mg",
+    "cena":{ 
+        "stara":950,
+        "nova": 600
+    },
+    "slika":"slike/Imunitet/Bromelain-300mg.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme5",
+    "dropId": "kolicina5"
+  
+},
+{
+    "id": 6,   
+    "naziv":"Rutin 500mg",
+    "cena":{ 
+        "stara":3600,
+        "nova": 3200
+    },
+    "slika":"slike/Imunitet/Rutin-500mg.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme6",
+    "dropId": "kolicina6"
+  
+},
+{
+    "id": 7,   
+    "naziv":"Ultibo Immune",
+    "cena":{ 
+        "stara":5500,
+        "nova": 4200
+    },
+    "slika":"slike/Imunitet/Ultibio-Immune.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme7",
+    "dropId": "kolicina7"
+  
+},
+{
+    "id": 8,   
+    "naziv":"Vitamin C 1500mg",
+    "cena":{ 
+        "stara":1800,
+        "nova": 1300
+    },
+    "slika":"slike/Imunitet/Vitamin-C-1500mg.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme8",
+    "dropId": "kolicina8"
+  
+},
+{
+    "id": 9,   
+    "naziv":"Alpha Lipoic Acid",
+    "cena":{ 
+        "stara":4400,
+        "nova": 4200
+    },
+    "slika":"slike/Lepota/Alpha-Lipoic-Acid.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme9",
+    "dropId": "kolicina9"
+  
+},
+{
+    "id": 10,   
+    "naziv":"Antioxidant Nutrients",
+    "cena":{ 
+        "stara": 900,
+        "nova":  600
+    },
+    "slika":"slike/Lepota/Antioxidant-Nutrients.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme10",
+    "dropId": "kolicina10"
+  
+},
+{
+    "id": 11,   
+    "naziv":"BCAA Plus",
+    "cena":{ 
+        "stara": 2600,
+        "nova": 1900
+    },
+    "slika":"slike/Lepota/BCAA-Plus.jpg",
+    "idKategorije": 1,
+    "buttonId": "dugme11",
+    "dropId": "kolicina11"
+  
+},
+{
+    "id": 12,   
+    "naziv":"Betaine Hydrochloride",
+    "cena":{ 
+        "stara":1300,
+        "nova": 900
+    },
+    "slika":"slike/Lepota/Betaine-Hydrochloride.jpg",
+    "idKategorije": 2,
+    "buttonId": "dugme12",
+    "dropId": "kolicina12"
+  
+},
+{
+    "id": 13,   
+    "naziv":"Bitoin 1000mg",
+    "cena":{ 
+        "stara":6200,
+        "nova": 5600
+    },
+    "slika": "slike/Lepota/Bitoin-1000mg.jpg",
+    "idKategorije": 2,
+    "buttonId": "dugme13",
+    "dropId": "kolicina13"
+  
+},
+{
+    "id": 14,   
+    "naziv":"Chelated Zinc",
+    "cena":{ 
+        "stara":3800,
+        "nova": 3400
+    },
+    "slika": "slike/Lepota/Chelated-Zinc.jpg",
+    "idKategorije": 2,
+    "buttonId": "dugme14",
+    "dropId": "kolicina14"
+  
+},
+{
+    "id": 15,   
+    "naziv":"Cranberry Vitamin C",
+    "cena":{ 
+        "stara":700,
+        "nova": 600
+    },
+    "slika": "slike/Lepota/Cranberry-with-Vitamin-C.jpg",
+    "idKategorije": 2,
+    "buttonId": "dugme15",
+    "dropId": "kolicina15"
+  
+},
+{
+    "id": 16,   
+    "naziv":"Digestive Enzymes",
+    "cena":{ 
+        "stara":1400,
+        "nova": 1200
+    },
+    "slika": "slike/Lepota/Digestive-Enzymes.jpg",
+    "idKategorije": 2,
+    "buttonId": "dugme16",
+    "dropId": "kolicina16"
+  
+},
+{
+    "id": 17,   
+    "naziv":"Alpha Lipoic acid",
+    "cena":{ 
+        "stara":4000,
+        "nova": 3200
+    },
+    "slika": "slike/Zdravlje/Alpha-Lipoic-acid.jpg",
+    "idKategorije": 3,
+    "buttonId": "dugme17",
+    "dropId": "kolicina17"
+  
+},
+{
+    "id": 18,   
+    "naziv":"Astaxanthin 5mg",
+    "cena":{ 
+        "stara":1400,
+        "nova": 950
+    },
+    "slika": "slike/Zdravlje/Astaxanthin-5mg.jpg",
+    "idKategorije": 3,
+    "buttonId": "dugme18",
+    "dropId": "kolicina18"
+  
+},
+{
+    "id": 19,   
+    "naziv":"Bilberry Ginko Eyebright",
+    "cena":{ 
+        "stara":1500,
+        "nova": 1300
+    },
+    "slika": "slike/Zdravlje/Bilberry-Ginko-Eyebright.jpg",
+    "idKategorije": 3,
+    "buttonId": "dugme19",
+    "dropId": "kolicina19"
+  
+},
+{
+    "id": 20,   
+    "naziv":"Coenztme Q-10",
+    "cena":{ 
+        "stara":400,
+        "nova": 350
+    },
+    "slika": "slike/Zdravlje/Coenztme-Q-10.jpg",
+    "idKategorije": 3,
+    "buttonId": "dugme20",
+    "dropId": "kolicina20"
+  
+},
+{
+    "id": 21,   
+    "naziv":"CoQ-10 120mg",
+    "cena":{ 
+        "stara": 1400,
+        "nova": 1250
+    },
+    "slika": "slike/Zdravlje/CoQ-10-120mg.jpg",
+    "idKategorije": 3,
+    "buttonId": "dugme21",
+    "dropId": "kolicina21"
+  
+},
+{
+    "id": 22,   
+    "naziv":"CoQ-10 30mg",
+    "cena":{ 
+        "stara":1800,
+        "nova": 1600
+    },
+    "slika": "slike/Zdravlje/CoQ-10-30mg.jpg",
+    "idKategorije": 3,
+    "buttonId": "dugme22",
+    "dropId": "kolicina22"
+  
+},
+{
+    "id": 23,   
+    "naziv":"L-Arginine 500mg",
+    "cena":{ 
+        "stara":900,
+        "nova": 800
+    },
+    "slika": "slike/Zdravlje/L-Arginine-500mg.jpg",
+    "idKategorije": 3,
+    "buttonId": "dugme23",
+    "dropId": "kolicina23"
+  
+},
+{
+    "id": 24,   
+    "naziv":"L-Cysteine 500mg",
+    "cena":{ 
+        "stara":3200,
+        "nova": 2400
+    },
+    "slika": "slike/Zdravlje/L-Cysteine-500mg.jpg",
+    "idKategorije": 3,
+    "buttonId": "dugme24",
+    "dropId": "kolicina24"
+  
+}
+
+]

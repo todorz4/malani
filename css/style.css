@@ -1,0 +1,1382 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+
+
+/*Header*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    width: 100vw;
+    margin: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+}
+
+.logo {
+    padding-left: 3vw;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    flex: 5;
+}
+
+.nav-links {
+    padding-right: 3vw;
+    flex: 3;
+    display: flex;
+    width: 35%;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.nav-links li {
+    list-style: none;
+    height: 8vh;
+    width: 35%;
+    text-align: center;
+    padding-top: 2vh;
+    background-color: white;
+}
+
+.praznina {
+    display: none;
+}
+
+.nav-links a {
+    color: #2d1716;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width:1300px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        flex: 1;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -6px);
+}
+
+
+
+#logo-naslov {
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    transform: translate(-50%, 50%);
+    animation: fill 1s ease forwards 3.5s;
+    z-index: 999;
+}
+
+#logo-naslov path:nth-child(1) {
+    stroke-dasharray: 738.779541015626;
+    stroke-dashoffset: 738.779541015626;
+    animation: linija-animacija 2s ease forwards;
+}
+
+#logo-naslov path:nth-child(2) {
+    stroke-dasharray: 483.73486328125;
+    stroke-dashoffset: 483.73486328125;
+    animation: linija-animacija 2s ease forwards 0.3s;
+}
+
+#logo-naslov path:nth-child(3) {
+    stroke-dasharray: 245.95196533203125;
+    stroke-dashoffset: 245.95196533203125;
+    animation: linija-animacija 2s ease forwards 0.6s;
+}
+
+#logo-naslov path:nth-child(4) {
+    stroke-dasharray: 483.7352294921875;
+    stroke-dashoffset: 483.7352294921875;
+    animation: linija-animacija 2s ease forwards 0.9s;
+}
+
+#logo-naslov path:nth-child(5) {
+    stroke-dasharray: 420.1994323730469;
+    stroke-dashoffset: 420.1994323730469;
+    animation: linija-animacija 2s ease forwards 1.2s;
+}
+
+#logo-naslov path:nth-child(6) {
+    stroke-dasharray: 257.65234376;
+    stroke-dashoffset: 257.65234376;
+    animation: linija-animacija 2s ease forwards 1.5s;
+}
+
+@keyframes linija-animacija {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: white;
+    }
+}
+
+
+/*Naslovna slika*/
+
+.naslovna-slika {
+    margin-top: 8vh;
+    background: url("../slike/naslovna.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.naslovna-slika .overlay {
+    margin-top: 9vh;
+    background: black;
+    background-size: 100%;
+    opacity: 0.3;
+    height: 100%;
+}
+
+@media(max-width:1200px) {
+    #logo-naslov {
+        top: 40%;
+        left: 50%;
+        width: 80vw;
+    }
+    .naslovna-slika {
+        background: url(../slike/mobile.jpg);
+        background-size: cover;
+        height: 70vh;
+        background-repeat: no-repeat;
+    }
+    .naslovna-slika .overlay {
+        height: 100%;
+    }
+}
+
+
+/* Proizvodi stranica*/
+
+
+/* PROZIVODI STRANA */
+
+.proizvodi-strana {
+    margin-top: 10vh;
+}
+
+.proizvodi-forma {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(63, 63, 63, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 3vh;
+    height: 85vh;
+    background-color: white;
+    font-size: 16px;
+}
+
+.dugme {
+    height: 25px;
+    width: 75px;
+    display: inline-block;
+    margin: auto;
+    color: white;
+    background-color: #c7a566;
+    border: none;
+}
+
+.dugme:hover {
+    transition: 0.5s ease;
+    background-color: rgb(22, 63, 22);
+}
+
+.dugme:active {
+    outline: none;
+}
+
+.kolicina-proizvoda {
+    height: 25px;
+    margin: 5px 5px;
+}
+
+#ta1 {
+    height: 18em;
+    width: 16em;
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+    resize: none;
+    background-color: white;
+    border: solid 1px #d3d3d3;
+}
+
+.korpa-podaci {
+    position: relative;
+    height: 50px;
+    width: 16em;
+    overflow: hidden;
+}
+
+.korpa-podaci input {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.korpa-podaci label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.korpa-podaci label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid #c7a566;
+    transform: translateX(-100%);
+    transition: transform all 0.3s ease;
+}
+
+.korpa-span {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+    color: rgb(163, 163, 163);
+}
+
+.korpa-podaci input:focus+.korpa-labela .korpa-span,
+.korpa-podaci input:valid+.korpa-labela .korpa-span {
+    transform: translateY(-100%);
+    font-size: 14px;
+    color: black;
+}
+
+.korpa-podaci input:focus+.korpa-labela::after,
+.korpa-podaci input:valid+.korpa-labela::after {
+    transform: translateX(0%);
+}
+
+#korpa-porucivanje {
+    display: flex;
+    flex-direction: row;
+}
+
+#korpa-porucivanje div {
+    flex: 1;
+    padding-top: 3vh;
+}
+
+#cena-labele {
+    padding-top: 30px;
+    width: 6em;
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 1px;
+    color: rgb(119, 119, 119);
+}
+
+#dugmici-porucivanje {
+    margin-right: 0;
+    right: 0px;
+    width: 6em;
+}
+
+.dugme-naruci {
+    border: none;
+    width: 6em;
+    height: 1.5em;
+    background-color: #c7a566;
+    color: rgb(255, 255, 255);
+}
+
+#dugme-ponisti-div {
+    width: 16em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.dugme-ponisti {
+    border: none;
+    width: 10em;
+    height: 1.7em;
+    margin: 0 0 0 0;
+    background-color: #c7a566;
+    color: rgb(255, 255, 255);
+}
+
+.dugme-naruci:hover {
+    background-color: rgb(22, 63, 22);
+}
+
+.dugme-ponisti:hover {
+    background-color: rgb(80, 12, 12);
+}
+
+
+/* PROZIVODI KATALOG */
+
+#kategorija1 {
+    font-size: 3em;
+}
+
+#kategorija2 {
+    font-size: 3em;
+}
+
+#kategorija3 {
+    font-size: 3em;
+}
+
+.prozivodi-katalog {
+    width: 75%;
+    margin-left: 15em;
+}
+
+.Proizvodi-naslov {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+}
+
+.Proizvodi-naslov h1 {
+    align-items: center;
+    margin: auto;
+    font-size: 3em;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.Proizvodi-naslov hr {
+    width: 95%;
+    margin-left: 2%;
+}
+
+.proizvodi-kategorija {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#kat1 {
+    background-color: #ffffff;
+}
+
+.proizvodi h1 {
+    padding: 0 4% 2%;
+    font-size: 15px;
+}
+
+#kategorija1 {
+    background-color: white;
+}
+
+.shadow {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 15% 5% 10%;
+    background-color: white;
+}
+
+.proizvod-karta {
+    padding: 2%;
+    flex: 1 25%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6s;
+}
+
+.proizvod-slika img {
+    display: block;
+    height: 20vh;
+    margin: 0 auto;
+}
+
+.proizvod-opis {
+    text-align: center;
+    padding-top: 17%;
+    margin: auto;
+}
+
+.proizvod-opis-cena {
+    display: flex;
+    flex-direction: row;
+}
+
+.poruci {
+    display: block;
+    margin: auto;
+}
+
+.dopuna {
+    display: none;
+}
+
+.proizvodi-kategorija {
+    padding-bottom: 5vh;
+    margin-bottom: 3vh;
+}
+
+@media (min-width:1500px) {
+    .proizvodi {
+        max-width: 1000px;
+        margin-left: 50em;
+    }
+    .Proizvodi-naslov {
+        max-width: 1020px;
+        margin-left: 50em;
+    }
+    .proizvodi-forma {
+        font-size: 12px;
+        margin-left: 40px;
+    }
+    #ta1 {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:1201px) and (max-width:1500px) {
+    .proizvodi {
+        max-width: 1000px;
+        margin-left: 32em;
+    }
+    .Proizvodi-naslov {
+        max-width: 1020px;
+        margin-left: 32em;
+    }
+    .proizvodi-forma {
+        font-size: 12px;
+    }
+    #ta1 {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:600px) {
+    .proizvod-karta:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width:1200px) {
+    .proizvod-karta {
+        flex: 1 30%;
+    }
+    .shadow {
+        width: 225px;
+    }
+    .dopuna {
+        display: inline;
+        flex: 1 30%;
+    }
+    .proizvodi-strana {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 900px;
+        margin: 10vh auto auto;
+    }
+    .proizvodi-forma {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+    #korpa-porucivanje {
+        flex-direction: row;
+        width: 16em;
+    }
+    .proizvodi-forma {
+        position: relative;
+    }
+}
+
+@media (max-width:900px) {
+    .proizvod-karta {
+        flex: 1 46%;
+        padding: none;
+        width: 50vw;
+    }
+    .proizvodi-strana {
+        width: 600px;
+        margin: 10vh auto auto;
+    }
+    .proizvod-slika img {
+        display: block;
+        height: 150px;
+        margin: 0;
+    }
+    .proizvodi-forma {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    #kategorija1 {
+        text-align: center;
+    }
+    #kategorija2 {
+        text-align: center;
+    }
+    #kategorija3 {
+        text-align: center;
+    }
+    .shadow {
+        padding: none;
+        width: 50vw;
+        margin: 0;
+        border-radius: none;
+        box-shadow: none;
+    }
+    .dopuna {
+        display: none;
+    }
+    .Proizvodi-naslov hr {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media (max-width:700px) {
+    .proizvod-karta {
+        flex: 1 50%;
+    }
+    .proizvodi-strana {
+        width: 100%;
+        margin: 10vh auto auto;
+    }
+    .Proizvodi-naslov {
+        display: block;
+        text-align: center;
+    }
+    .proizvodi-forma {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    .proizvodi-katalaog {
+        width: 100%;
+    }
+    .proizvod-slika img {
+        display: block;
+        height: 150px;
+        margin: auto;
+    }
+    .shadow {
+        border-radius: 0;
+        margin: auto;
+        padding: 0;
+    }
+}
+
+
+/* O nama */
+
+.o-nama {
+    display: flex;
+    flex-direction: row;
+    color: rgb(156, 155, 155);
+}
+
+.o-nama .imena {
+    height: 400px;
+    border-radius: 10px;
+    margin: 10px;
+    flex: 1;
+    padding: 10vh;
+    margin-top: 2vh;
+}
+
+.o-nama .vitamincic {
+    height: 400px;
+    border-radius: 10px;
+    margin: 20px;
+    flex: 1;
+    margin-top: 5vh;
+}
+
+.o-nama .vitamincic img {
+    padding-bottom: 5vh;
+    height: 400px;
+    width: 100%;
+}
+
+.o-nama .saznaj-vise {
+    margin-top: 5vh;
+    padding: 0.7em 1.6em;
+    border: none;
+    border-radius: 3em;
+    text-decoration: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    background-color: #c7a566;
+    text-align: center;
+    cursor: pointer;
+}
+
+.o-nama .imena h1 {
+    font-weight: 600;
+    margin-top: 5vh;
+    color: #302519;
+    font-size: 30px;
+    text-align: left;
+}
+
+.o-nama .imena p {
+    text-align: justify;
+    margin-top: 3vh;
+    font-size: 15px;
+}
+
+
+/* Lanine kategorije*/
+
+@media (min-width:1020px) {
+    .o-nama {
+        max-width: 1200px;
+        margin: auto;
+    }
+    .flex .box {
+        max-width: 1200px;
+        margin: auto;
+    }
+    .sekcija4 {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #f8f9fa;
+}
+
+.flex .box {
+    align-items: center;
+    width: calc(27vw - 20px);
+    height: 70vh;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+.flex .content {
+    display: none;
+    text-align: center;
+    z-index: 900;
+    color: #c7a566;
+}
+
+.flex .box .content h1 {
+    font-size: 30px;
+}
+
+.flex .box .content button {
+    margin-top: 1vh;
+    padding: 0.5em 1.6em;
+    border: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2d1716;
+    background-color: #c7a566;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.flex .box:hover .content {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flex .box .middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.flex .box:hover .middle {
+    opacity: 0.6;
+}
+
+.flex-slika {
+    height: 100%;
+}
+
+.flex .box:hover {
+    transform: translate(0, -15px);
+}
+
+
+/* SEKCIJA 2 DELA*/
+
+.sekcija4 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sekcija4 .kvadrat {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+}
+
+.kvadrat-slideshow img {
+    width: 400px;
+    height: 400px;
+}
+
+@media(max-width: 550px) {
+    .kvadrat-slideshow img {
+        width: 80vw;
+        height: 80vw;
+    }
+    .tekst-dugme {
+        width: 80vw;
+        margin: auto;
+    }
+}
+
+.kvadrat-kontakt {
+    flex: 1;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+}
+
+.kvadrat-kontakt .tekst {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    text-align: justify;
+    color: rgb(156, 155, 155);
+    margin-top: 80px;
+}
+
+.tekst-dugme {
+    margin: auto 20px;
+    margin-right: 100px;
+}
+
+.tekst-dugme h1 {
+    color: #302519;
+    margin-bottom: 20px;
+}
+
+.kvadrat-kontakt .tekst button {
+    margin-top: 5vh;
+    padding: 0.7em 1.9em;
+    border-radius: 2em;
+    border: none;
+    text-decoration: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    background-color: #c7a566;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+@media (min-width:786px) and (max-width:1050px) {
+    .flex {
+        flex-direction: column;
+        height: 1680px;
+    }
+    .flex .box {
+        margin: 30px auto;
+        width: 500px;
+        height: 500px;
+    }
+    .flex-slika {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width:786px) {
+    .flex {
+        flex-direction: column;
+        height: 1020px;
+    }
+    .flex .box {
+        margin: 20px auto;
+        width: 300px;
+        height: 300px;
+    }
+    .flex-slika {
+        width: 100%;
+        height: 100%;
+    }
+    .o-nama {
+        flex-direction: column;
+    }
+    .o-nama .vitamincic img {
+        display: none;
+    }
+    .o-nama .imena {
+        margin: 0 auto 10vh;
+        padding: 0;
+        width: 400px;
+    }
+    .sekcija4 .kvadrat {
+        flex-direction: column;
+    }
+    .tekst-dugme {
+        width: 400px;
+        margin: auto;
+    }
+    .tekst-dugme h1 {
+        text-align: left;
+    }
+}
+
+
+/*Footer*/
+
+footer {
+    color: #ad7b41;
+    bottom: 0;
+}
+
+.footer-ceo {
+    color: #2d1716;
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding: 55px 50px;
+    margin-top: 5vh;
+    font-size: 13px;
+}
+
+.footer-ceo .footer-levo,
+.footer-ceo .footer-centar,
+.footer-ceo .footer-desno {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-ceo .footer-levo {
+    width: 40%;
+}
+
+.footer-ceo h3 {
+    font: 36px;
+    margin: 0;
+}
+
+.footer-levo h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.footer-ceo .footer-linkovi {
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-ceo .footer-linkovi a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-ceo .footer-malani {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-ceo .footer-centar {
+    width: 35%;
+}
+
+.footer-ceo .footer-centar i {
+    background-color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-ceo .footer-centar i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-ceo .footer-centar p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-ceo .footer-centar p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-ceo .footer-centar p a {
+    text-decoration: none;
+    color: #2d1716;
+}
+
+.footer-ceo .footer-desno {
+    width: 20%;
+}
+
+.footer-ceo .footer-onama {
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+    text-align: justify;
+}
+
+.footer-onama p {
+    font-size: 11px;
+}
+
+.footer-ceo .footer-onama h1 {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer-ceo .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-ceo .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #2d1716;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .footer-ceo {
+        background-color: #f8f9fa;
+    }
+    .footer-ceo .footer-levo,
+    .footer-ceo .footer-centar,
+    .footer-ceo .footer-desno {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-ceo .footer-centar i {
+        margin-left: 0;
+    }
+    #sijalica {
+        display: none;
+    }
+    .kontakt {
+        margin-bottom: 20px;
+    }
+    .kvadrat-slideshow {
+        margin: auto;
+    }
+    .footer-onama h1 {
+        text-align: center;
+    }
+}
+
+
+/* O nama stranica */
+
+@media (max-width: 768px) {
+    #misija {
+        flex-direction: column;
+        height: 100vh;
+    }
+    #vizija {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+    #cilj {
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
+.oNama {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5vh;
+}
+
+#misija {
+    display: flex;
+    height: 50vh;
+}
+
+#tekstMisija {
+    flex: 7;
+    background: rgb(255, 255, 255);
+    text-align: justify;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 3%;
+}
+
+#slikaMisija {
+    flex: 13;
+    background-image: url("../slike/z1.jpg");
+    background-size: 100%;
+}
+
+#vizija {
+    display: flex;
+    height: 50vh;
+}
+
+#slikaVizija {
+    flex: 13;
+    background-image: url("../slike/misija.jpg");
+    background-size: 100%;
+}
+
+#tekstVizija {
+    flex: 7;
+    text-align: justify;
+    padding-top: 6%;
+    padding-left: 6%;
+    padding-right: 6%;
+    background: #f8f9fa;
+}
+
+#cilj {
+    display: flex;
+    height: 50vh;
+}
+
+#tekstCilj {
+    flex: 7;
+    background: rgb(255, 255, 255);
+    text-align: justify;
+    padding-top: 6%;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+#slikaCilj {
+    flex: 13;
+    background-image: url("../slike/z6.jpg");
+    background-size: 100%;
+}
+
+#onama {
+    flex: 1;
+    text-align: center;
+    padding: 2%;
+    background: #f8f9fa;
+}
+
+#about-footer {
+    margin-top: 0;
+}
+
+
+/* Kontakt stranica */
+
+.kontakt-forma {
+    background: #f8f9fa;
+    padding: 1vw;
+    border-radius: 5px;
+    max-width: 50vw;
+}
+
+.kontakt-posalji-obrisi {
+    flex: 1;
+}
+
+.kontakt-podaci {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-podaci,
+.kontakt-poruka {
+    width: 69%;
+}
+
+.kontakt-podaci .kontakt,
+.kontakt-poruka textarea {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #c7a566;
+    padding: 10px;
+    width: 100%;
+}
+
+.kontakt-poruka textarea {
+    height: 150px;
+    max-width: 45vw;
+}
+
+::-webkit-input-placeholder {
+    color: #2d1716;
+}
+.form-control {
+
+    width: 25%;;
+    height: 34px;
+    margin-right: 20px;
+    padding: 6px 4px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    background: #c7a566;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 300px;
+    border: none;
+}
+
+input[type=reset] {
+    background: #c7a566;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 300px;
+    border: none;
+}
+
+.googlemap {
+    width: 100%;
+    height: 100%;
+}
+
+.raspored-levo {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-informacije {
+    margin-left: 10%;
+    flex: 1;
+}
+
+.kontakt-informacije p {
+    margin-top: 2vh;
+    font-size: 17px;
+}
+
+.kontakt-mapa {
+    flex: 2;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.raspored {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10vh;
+}
+
+.raspored-levo {
+    flex: 1;
+}
+
+.raspored-desno {
+    flex: 1;
+}
+
+@media (max-width:780px) {
+    .raspored {
+        flex-direction: column;
+        margin: auto;
+    }
+     ::-webkit-input-placeholder {
+        font-size: 10px;
+    }
+    input[type=submit] {
+        width: 45vw;
+    }
+    body {
+        font-size: 10px;
+    }
+    .kontakt-informacije {
+        margin: 0 auto;
+    }
+    .kontakt-mapa {
+        width: 60vw;
+        margin: 0 auto;
+    }
+    .kontakt-forma {
+        flex-direction: column;
+        margin: 5vh auto;
+        max-width: 60vw;
+        padding: 0 7.5vw;
+    }
+}
+
+@media(min-width:1200px) {
+    .raspored {
+        width: 1000px;
+        margin: 15vh auto auto;
+    }
+}
+
+.hideme {
+    opacity: 0;
+}
+.crveno,#opis1,#opis2,#opis3,#opis4{
+    color:#ff0000;
+}
+#kontaktPoslato{
+    color:lightskyblue;
+}
