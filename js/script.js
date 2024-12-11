@@ -74,7 +74,6 @@ const navSlide = () => {
 
 navSlide();
 
-/*Put do Jankovog pakla*/
 const logo = document.querySelectorAll("#logo-naslov path");
 
 for (let i = 0; i < logo.length; i++) {
