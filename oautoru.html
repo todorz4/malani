@@ -8,31 +8,96 @@
     <script src="https://kit.fontawesome.com/e23f2e2d84.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Malani</title>
 
     <style>
-        body {
+
+     
+.container {
+    width: 60%;
     display: flex;
-    justify-content: center;  /* Horizontalno centriranje */
-    align-items: center;      /* Vertikalno centriranje */
-    height: 100vh;            /* Postavite visinu tela na 100% visine ekrana */
-    margin: 0;                /* Uklanja margine */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    margin-left: auto;  
+    margin-right: auto; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 20px;
-            margin-top:200px;
-        }
-        .container img {
-            width: 400px; /* Postavite veličinu slike po želji */
-            height:400px;
-        }
-        .container .text {
-            max-width: 700px;
-        }
+
+.container img {
+    width: 400px; /* Postavite veličinu slike po želji */
+    height: 400px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.container .text {
+    max-width: 300px;
+	font-size:13px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .container img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .container .text {
+        max-width: 100%; 
+        padding: 10px; 
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .container {
+        width: 60%;
+    }
+
+    .container img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin-top: 100px; 
+    }
+
+    .footer-ceo {
+        text-align: center; 
+    }
+
+    .footer-levo, .footer-centar, .footer-desno {
+        width: 100%; 
+    }
+
+    .footer-icons {
+        text-align: center;
+    }
+
+    .footer-icons a {
+        margin: 0 10px; 
+    }
+}
+
+		
+		
+		
     </style>
 </head>
 
@@ -75,7 +140,10 @@
 <div class="container">
     <img src="slike/profilna.jpg" alt="Slika">
     <div class="text">
-        <p>Ovo je primer teksta koji je smešten sa desne strane slike. Možete dodavati više sadržaja unutar ovog bloka.</p>
+	<h3>Malo više o meni...</h3>
+        <p>Moje ime je Todor Zagorac i student sam visoke ICT škole, gde se unapređujem u programiranju. 
+		Veoma sam strastven prema programiranju, jer mi omogućava da rešavam probleme i stvaram nova rešenja.Uvek sam u potrazi za novim izazovima koji mi pomažu
+		da unapredim svoje veštine i znanje u ovom uzbudljivom polju. Takođe, uživam u igranju košarke i glednju filmova. </p>
     </div>
 </div>
 
